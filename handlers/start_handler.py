@@ -111,6 +111,7 @@ def new_order(call: CallbackQuery):
 
 @bot.message_handler(commands=['start'])
 def start(message: Message):
-    text = "<b>🌟 Главное меню @chip_hamster_refs_bot</b>"
+    text = ("<b>🌟 Главное меню @chip_hamster_refs_bot</b>\n"
+            "Один реферал: <b>69 руб</b>")
     with open('images/start.png', 'rb') as file:
         bot.send_photo(message.chat.id, file, caption=text, parse_mode='HTML', reply_markup=getMarkupForStart())
